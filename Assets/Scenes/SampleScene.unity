@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12531482}
   - component: {fileID: 12531483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 16563599}
   - component: {fileID: 16563601}
   - component: {fileID: 16563600}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148394191}
   - component: {fileID: 148394192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 149342740}
   - component: {fileID: 149342742}
   - component: {fileID: 149342741}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,7 +536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252801199}
   - component: {fileID: 252801200}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe5 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ GameObject:
   m_Component:
   - component: {fileID: 302341077}
   - component: {fileID: 302341078}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312559040}
   - component: {fileID: 312559041}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 476636124}
   - component: {fileID: 476636126}
   - component: {fileID: 476636125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 480964915}
   - component: {fileID: 480964916}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe5 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 547745891}
   - component: {fileID: 547745892}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698211537}
   - component: {fileID: 698211538}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1320,7 +1320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 774022312}
   - component: {fileID: 774022313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 775299621}
   - component: {fileID: 775299623}
   - component: {fileID: 775299622}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 809203431}
   - component: {fileID: 809203432}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1572,7 +1572,7 @@ GameObject:
   - component: {fileID: 857321063}
   - component: {fileID: 857321065}
   - component: {fileID: 857321064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1667,7 +1667,7 @@ GameObject:
   - component: {fileID: 1073381089}
   - component: {fileID: 1073381091}
   - component: {fileID: 1073381090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,7 +1761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089264587}
   - component: {fileID: 1089264588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1839,7 +1839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203035873}
   - component: {fileID: 1203035874}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1917,7 +1917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1235752053}
   - component: {fileID: 1235752054}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,7 +1995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264024609}
   - component: {fileID: 1264024610}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2074,7 +2074,7 @@ GameObject:
   - component: {fileID: 1469843170}
   - component: {fileID: 1469843172}
   - component: {fileID: 1469843171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2168,7 +2168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507529664}
   - component: {fileID: 1507529665}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2354,7 +2354,8 @@ Transform:
   m_LocalPosition: {x: -6.926, y: -2.436, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1977542218}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1514787074
@@ -2415,9 +2416,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd6a77c2a167444cb5ed0870d80d033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  rb: {fileID: 0}
+  groundCheckTransform: {fileID: 1977542217}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   moveSpeed: 5
   jumpForce: 10
+  groundCheckRadius: 0.02
 --- !u!1 &1600284241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2434,7 @@ GameObject:
   - component: {fileID: 1600284242}
   - component: {fileID: 1600284244}
   - component: {fileID: 1600284243}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2615,7 +2620,7 @@ GameObject:
   - component: {fileID: 1639956150}
   - component: {fileID: 1639956152}
   - component: {fileID: 1639956151}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2709,7 +2714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648236128}
   - component: {fileID: 1648236129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2788,7 +2793,7 @@ GameObject:
   - component: {fileID: 1678183408}
   - component: {fileID: 1678183410}
   - component: {fileID: 1678183409}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2882,7 +2887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729323409}
   - component: {fileID: 1729323410}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2960,7 +2965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874637825}
   - component: {fileID: 1874637826}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3039,7 +3044,7 @@ GameObject:
   - component: {fileID: 1974129520}
   - component: {fileID: 1974129522}
   - component: {fileID: 1974129521}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Edge (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3123,6 +3128,37 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &1977542217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977542218}
+  m_Layer: 0
+  m_Name: GroundTransformDetect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977542218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977542217}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1514787073}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2128885654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,7 +3169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128885655}
   - component: {fileID: 2128885656}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
