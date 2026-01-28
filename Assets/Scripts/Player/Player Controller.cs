@@ -5,26 +5,24 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
-    public GameObject groundCheckTransform;
+    [Header("Ground Check Settings")]
     public LayerMask groundLayer;
-    public SpriteRenderer _sr;
-    private Animator _anim;
 
+    [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public float groundCheckRadius = 0.02f;
 
+
     private Rigidbody2D _rb;
     private Collider2D _collider;
+    public SpriteRenderer _sr;
+    private Animator _anim;
+    private GroundCheck _groundCheck;
+
     private bool _isGrounded = false;
-    private Vector2 groundCheckPos => CalculateGroundCheck();
+    private bool _isFiring = false;
 
-
-    private Vector2 CalculateGroundCheck()
-    {
-        Bounds bounds = _collider.bounds;
-        return new Vector2(bounds.center.x, bounds.min.y);
-    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,12 +30,14 @@ public class PlayerController : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _sr = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
+
+        _groundCheck = new GroundCheck(_collider, _rb, groundCheckRadius, groundLayer);
     }
 
     // Update is called once per frame
     void Update()
     {
-        _isGrounded = Physics2D.OverlapCircle(groundCheckPos, groundCheckRadius, groundLayer);
+        _isGrounded = _groundCheck.IsGrounded();
 
         // input handling
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -48,9 +48,12 @@ public class PlayerController : MonoBehaviour
         if (horizontalInput != 0) SpriteFlip(horizontalInput);
 
         // movement
-        Vector2 velocity = _rb.linearVelocity;
-        velocity.x = horizontalInput * moveSpeed;
-        _rb.linearVelocity = velocity;
+        if (!_isFiring)
+        {
+            Vector2 velocity = _rb.linearVelocity;
+            velocity.x = horizontalInput * moveSpeed;
+            _rb.linearVelocity = velocity;
+        }
 
         // jumping
         if (jumpInput && _isGrounded)
@@ -58,26 +61,33 @@ public class PlayerController : MonoBehaviour
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
-        // attacking
-        if (attackInput && _isGrounded) // Ground Attack
+        // attacking or shooting
+        if (attackInput) // Fire
         {
-            _anim.SetTrigger("triggerAttack");
+            _rb.linearVelocity = Vector2.zero;
+            _isFiring = true;
         }
-        else if (attackInput && !_isGrounded && verticalInput > 0) // Jump Attack
-        {
-            _anim.SetTrigger("triggerJumpAttack");
-        }
-        
+
+        //else if (attackInput && !_isGrounded && verticalInput > 0) // Jump Attack
+        //{
+        //    _anim.SetTrigger("triggerJumpAttack");
+        //}
+
 
         //animation
         _anim.SetFloat("moveInput", Mathf.Abs(horizontalInput));
         _anim.SetBool("isGrounded", _isGrounded);
         _anim.SetFloat("yVel", _rb.linearVelocity.y);
+        _anim.SetBool("Fire", _isFiring);
     }
     /// <summary>
     /// Sprite flipping based on horizontal input - this function should only be called when horizontal input is non-zero
     /// </summary>
     /// <param name="horizontalInput">The input received from Unity's input system</param>
     private void SpriteFlip(float horizontalInput) => _sr.flipX = (horizontalInput < 0);
+    public void ResetFireAnimation()
+    {
+        _isFiring = false;
+    }
 }
 

@@ -41,5 +41,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PlayArea
+    uniqueID: 3867275073
+    locked: 0
   m_RenderingLayers:
   - Default
