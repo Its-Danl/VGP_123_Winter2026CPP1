@@ -128,16 +128,15 @@ public class PlayerController : MonoBehaviour
         }
 
         // attacking or shooting
-        if (attackInput) // Fire
+        if (attackInput && _isGrounded) // Fire
         {
             _rb.linearVelocity = Vector2.zero;
             _isFiring = true;
         }
-
-        //else if (attackInput && !_isGrounded && verticalInput > 0) // Jump Attack
-        //{
-        //    _anim.SetTrigger("triggerJumpAttack");
-        //}
+        else if (attackInput && !_isGrounded && verticalInput > 0) // Jump Attack
+        {
+            _anim.SetTrigger("triggerJumpAttack");
+        }
 
 
         //animation
