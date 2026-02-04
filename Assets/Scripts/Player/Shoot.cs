@@ -13,8 +13,8 @@ public class Shoot : MonoBehaviour
         _sr = GetComponent<SpriteRenderer>();
         if (initalShotVelocity == Vector2.zero)
         {
-            initalShotVelocity = new Vector2(3, 3);
-            Debug.LogWarning("Initial shot velocity was zero, setting to default (3,3)");
+            initalShotVelocity = new Vector2(3, 0);
+            Debug.LogWarning("Initial shot velocity was zero, setting to default (3,0)");
         }
 
         if (spawnPointLeft == null || spawnPointRight == null || projectilePrefab == null)
@@ -34,7 +34,7 @@ public class Shoot : MonoBehaviour
         else
         {
             currentProjectile = Instantiate(projectilePrefab, spawnPointLeft.position, Quaternion.identity);
-            currentProjectile.SetVelocity(initalShotVelocity);
+            currentProjectile.SetVelocity(-initalShotVelocity);
         }
     }
 }

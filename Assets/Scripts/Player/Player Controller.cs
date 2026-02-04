@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -13,6 +14,69 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     public float groundCheckRadius = 0.02f;
 
+
+    [Header("Powerup Settings")]
+    private float initialJumpForce;
+    public float initialPowerupDuration = 5f;
+    public float powerupJumpForce = 20f;
+
+    private float currentPowerupDuration = 0f;
+    private Coroutine jumpforceCoroutine = null;
+
+    public void JumpForceChange()
+    {
+        if (jumpforceCoroutine != null)
+        {
+            StopCoroutine(jumpforceCoroutine);
+            jumpforceCoroutine = null;
+            jumpForce = 10f;
+        }
+
+        jumpforceCoroutine = StartCoroutine(JumpForceChangeCoroutine());
+    }
+
+    IEnumerator JumpForceChangeCoroutine() // powerup timer
+    {
+        currentPowerupDuration = initialPowerupDuration + currentPowerupDuration;
+        jumpForce = powerupJumpForce;
+        while (currentPowerupDuration > 0f)
+        {
+            currentPowerupDuration -= Time.deltaTime;
+            yield return null;
+        }
+
+        jumpForce = initialJumpForce;
+        jumpforceCoroutine = null;
+        currentPowerupDuration = 0;
+    }
+
+
+    private int _lives = 3; // internal value
+    private int maxLives = 5;
+
+    public int lives //C# property accessors
+    {
+        get => _lives;
+        set 
+        {
+            if (value < 0)
+            {
+                // die
+                return;
+            }
+
+            if (value > maxLives)
+            {
+                _lives = maxLives;
+            }
+            else
+            {
+                _lives = value;
+            }
+
+            Debug.Log("Life pickup collected:" + _lives);
+        }
+    }
 
     private Rigidbody2D _rb;
     private Collider2D _collider;
@@ -32,6 +96,8 @@ public class PlayerController : MonoBehaviour
         _anim = GetComponent<Animator>();
 
         _groundCheck = new GroundCheck(_collider, _rb, groundCheckRadius, groundLayer);
+
+        initialJumpForce = jumpForce;
     }
 
     // Update is called once per frame

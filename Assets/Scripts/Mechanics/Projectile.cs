@@ -1,8 +1,10 @@
 using UnityEngine;
 
-[RequireComponent (typeof(Rigidbody2D))]
+[RequireComponent (typeof(Rigidbody2D), typeof(CircleCollider2D))]
 public class Projectile : MonoBehaviour
 {
+
+
     [SerializeField, Range(0.5f, 10f)] private float lifetime = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,5 +15,10 @@ public class Projectile : MonoBehaviour
     public void SetVelocity(Vector2 Velocity)
     {
         GetComponent<Rigidbody2D>().linearVelocity = Velocity;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
     }
 }
