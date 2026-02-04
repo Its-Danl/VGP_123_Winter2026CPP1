@@ -17,9 +17,12 @@ public class Projectile : MonoBehaviour
         GetComponent<Rigidbody2D>().linearVelocity = Velocity;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Terrain")) // This can be done so much better
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

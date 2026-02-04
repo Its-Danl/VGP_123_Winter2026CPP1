@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8611291002828988376}
   - component: {fileID: 6468106454533004213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 9060945619868244299}
   - component: {fileID: 6154527557842073204}
   - component: {fileID: 5407061061465780832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,4 +258,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d43df256e25f19d419e088a8750df2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jump
-  livesToAdd: 1

@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 12531483}
   m_Layer: 3
   m_Name: Ground1 (11)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 16563600}
   m_Layer: 3
   m_Name: Edge (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,9 +300,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2820378712191979600, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_Name
       value: 1 Up (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8403594248715157769, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -361,7 +369,7 @@ GameObject:
   - component: {fileID: 148394192}
   m_Layer: 3
   m_Name: Ground1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,7 +448,7 @@ GameObject:
   - component: {fileID: 149342741}
   m_Layer: 3
   m_Name: Edge (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,7 +541,7 @@ GameObject:
   - component: {fileID: 209781195}
   m_Layer: 0
   m_Name: LevelColliders
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -595,7 +603,7 @@ GameObject:
   - component: {fileID: 252801200}
   m_Layer: 3
   m_Name: Pipe5 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -673,7 +681,7 @@ GameObject:
   - component: {fileID: 302341078}
   m_Layer: 3
   m_Name: Pipe2
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -751,7 +759,7 @@ GameObject:
   - component: {fileID: 312559041}
   m_Layer: 3
   m_Name: Ground1 (10)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -830,7 +838,7 @@ GameObject:
   - component: {fileID: 476636125}
   m_Layer: 3
   m_Name: Edge (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -924,7 +932,7 @@ GameObject:
   - component: {fileID: 480964916}
   m_Layer: 3
   m_Name: Pipe5 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1155,7 +1163,7 @@ GameObject:
   - component: {fileID: 547745892}
   m_Layer: 3
   m_Name: Ground1 (7)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1229,9 +1237,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2820378712191979600, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_Name
       value: 1 Up (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8403594248715157769, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1374,7 +1390,7 @@ GameObject:
   - component: {fileID: 698211538}
   m_Layer: 3
   m_Name: Ground1 (9)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1452,7 +1468,7 @@ GameObject:
   - component: {fileID: 774022313}
   m_Layer: 3
   m_Name: Pipe4
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1531,7 +1547,7 @@ GameObject:
   - component: {fileID: 775299622}
   m_Layer: 3
   m_Name: Edge
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1625,7 +1641,7 @@ GameObject:
   - component: {fileID: 809203432}
   m_Layer: 3
   m_Name: Ground1 (1)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,7 +1720,7 @@ GameObject:
   - component: {fileID: 857321064}
   m_Layer: 3
   m_Name: Edge (9)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1794,9 +1810,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2820378712191979600, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_Name
       value: 1 Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8403594248715157769, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1887,7 +1911,7 @@ GameObject:
   - component: {fileID: 1073381090}
   m_Layer: 3
   m_Name: Edge (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1981,7 +2005,7 @@ GameObject:
   - component: {fileID: 1089264588}
   m_Layer: 3
   m_Name: Ground1 (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2055,9 +2079,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2820378712191979600, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6638425063150759550, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
       propertyPath: m_Name
       value: Jump (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638425063150759550, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8403594248715157769, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2116,7 +2148,7 @@ GameObject:
   - component: {fileID: 1203035874}
   m_Layer: 3
   m_Name: Ground1 (3)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2194,7 +2226,7 @@ GameObject:
   - component: {fileID: 1235752054}
   m_Layer: 3
   m_Name: Pipe1
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2272,7 +2304,7 @@ GameObject:
   - component: {fileID: 1264024610}
   m_Layer: 3
   m_Name: Pipe3
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2351,7 +2383,7 @@ GameObject:
   - component: {fileID: 1469843171}
   m_Layer: 3
   m_Name: Edge (6)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2441,9 +2473,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2820378712191979600, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_Name
       value: 1 Up (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638425063150759550, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8403594248715157769, guid: 7f970e7aa1e4c0e498cdacba3eab1f27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2502,7 +2542,7 @@ GameObject:
   - component: {fileID: 1507529665}
   m_Layer: 3
   m_Name: Ground1 (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2806,9 +2846,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2820378712191979600, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6638425063150759550, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
       propertyPath: m_Name
       value: Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638425063150759550, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8403594248715157769, guid: 89153b4fa305b32429ba5e607c5228ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2868,7 +2916,7 @@ GameObject:
   - component: {fileID: 1600284243}
   m_Layer: 3
   m_Name: Edge (8)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3054,7 +3102,7 @@ GameObject:
   - component: {fileID: 1639956151}
   m_Layer: 3
   m_Name: Edge (10)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3148,7 +3196,7 @@ GameObject:
   - component: {fileID: 1648236129}
   m_Layer: 3
   m_Name: Pipe5
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3227,7 +3275,7 @@ GameObject:
   - component: {fileID: 1678183409}
   m_Layer: 3
   m_Name: Edge (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3321,7 +3369,7 @@ GameObject:
   - component: {fileID: 1729323410}
   m_Layer: 3
   m_Name: Ground1 (4)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3399,7 +3447,7 @@ GameObject:
   - component: {fileID: 1874637826}
   m_Layer: 3
   m_Name: Ground1 (2)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3478,7 +3526,7 @@ GameObject:
   - component: {fileID: 1974129521}
   m_Layer: 3
   m_Name: Edge (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3572,7 +3620,7 @@ GameObject:
   - component: {fileID: 2128885656}
   m_Layer: 3
   m_Name: Ground1 (5)
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
