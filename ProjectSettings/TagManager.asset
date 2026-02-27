@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Terrain
+  - Enemy
+  - Barrier
+  - Squish
   layers:
   - Default
   - TransparentFX
@@ -15,8 +18,8 @@ TagManager:
   - Player
   - PlayerProjectile
   - PickUps
-  - 
-  - 
+  - Enemy
+  - EnemyProjectile
   - 
   - 
   - 

@@ -1,0 +1,19 @@
+using UnityEngine;
+
+[RequireComponent(typeof(BoxCollider2D))]
+public class Checkpoint : MonoBehaviour
+{
+    
+    void Start()
+    {
+        GetComponent<BoxCollider2D>().isTrigger = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            GameManager.Instance.UpdateCheckpoint(transform.position);
+        }
+    }
+}

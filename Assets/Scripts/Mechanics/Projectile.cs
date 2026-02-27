@@ -3,9 +3,9 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody2D), typeof(CircleCollider2D))]
 public class Projectile : MonoBehaviour
 {
-
-
+    [SerializeField] private ProjectileType type = ProjectileType.PlayerProjectile;
     [SerializeField, Range(0.5f, 10f)] private float lifetime = 10f;
+    [SerializeField] private int damage = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,10 +19,30 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Terrain")) // This can be done so much better
+        if (type == ProjectileType.PlayerProjectile)
         {
-            Destroy(gameObject);
+            BaseEnemy enemy = collision.gameObject.GetComponent<BaseEnemy>();
+
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+                Destroy(gameObject);
+            }
+        }
+
+        if (type == ProjectileType.EnemyProjectile)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                GameManager.Instance.Lives--;
+                Destroy(gameObject);
+            }
         }
     }
+}
 
+public enum ProjectileType
+{
+    PlayerProjectile,
+    EnemyProjectile
 }

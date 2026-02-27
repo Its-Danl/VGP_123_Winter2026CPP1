@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1051659628626287208}
   - component: {fileID: 3441753482028601417}
   - component: {fileID: 8047050666140063030}
-  m_Layer: 7
-  m_Name: PlayerProjectile
+  m_Layer: 10
+  m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7185912387340643949, guid: 3fa644d1ba2c1d44493530e7c11e30bc, type: 3}
+  m_Sprite: {fileID: -675099761668843415, guid: 3fa644d1ba2c1d44493530e7c11e30bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,8 +109,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
-  m_Material: {fileID: 6200000, guid: ce77088d9439c4c4f88826cacd9ad5a0, type: 2}
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5798a237370794d49a016ea0b0e00cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  type: 0
+  type: 1
   lifetime: 10
   damage: 10
 --- !u!58 &8047050666140063030

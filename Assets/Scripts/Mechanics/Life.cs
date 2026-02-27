@@ -4,7 +4,7 @@ public class Life : PickUp
 {
     private Rigidbody2D rb;
     public int livesToAdd = 1;
-    public override void OnPickup(GameObject player) => player.GetComponent<PlayerController>().lives += livesToAdd;
+    public override void OnPickup(GameObject player) => GameManager.Instance.Lives += livesToAdd;
 
     private void Start()
     {

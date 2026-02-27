@@ -51,32 +51,33 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private int _lives = 3; // internal value
-    private int maxLives = 5;
+    //private int _lives = 3; // internal value
+    //private int maxLives = 5;
 
-    public int lives //C# property accessors
-    {
-        get => _lives;
-        set 
-        {
-            if (value < 0)
-            {
-                // die
-                return;
-            }
+    //public int lives //C# property accessors
+    //{
+    //    get => _lives;
+    //    set
+    //    {
+    //        if (value < 0)
+    //        {
+    //            // die
+    //            Debug.Log("Game Over");
+    //            return;
+    //        }
 
-            if (value > maxLives)
-            {
-                _lives = maxLives;
-            }
-            else
-            {
-                _lives = value;
-            }
+    //        if (value > maxLives)
+    //        {
+    //            _lives = maxLives;
+    //        }
+    //        else
+    //        {
+    //            _lives = value;
+    //        }
 
-            Debug.Log("Life pickup collected:" + _lives);
-        }
-    }
+    //        Debug.Log("Life pickup collected:" + _lives);
+    //    }
+    //}
 
     private Rigidbody2D _rb;
     private Collider2D _collider;
@@ -154,5 +155,14 @@ public class PlayerController : MonoBehaviour
     {
         _isFiring = false;
     }
-}
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       if (collision.CompareTag("Squish") && _rb.linearVelocityY < 0)
+        {
+            collision.GetComponentInParent <BaseEnemy>().TakeDamage(0, DamageType.JumpedOn);
+            _rb.linearVelocityY = 0;
+            _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
+}
