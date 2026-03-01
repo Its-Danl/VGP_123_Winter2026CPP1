@@ -218,7 +218,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   moveSpeed: 5
-  jumpForce: 12
+  jumpForce: 11
   groundCheckRadius: 0.02
   initialPowerupDuration: 5
   powerupJumpForce: 20
