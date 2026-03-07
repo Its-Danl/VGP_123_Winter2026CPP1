@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,8 @@ public class GameManager : MonoBehaviour
     //observer pattern
     public delegate void PlayerInstanceDelegate(PlayerController player);
     public event PlayerInstanceDelegate OnPlayerSpawned;
+
+    public Action<int> OnLifeValueChanged;
 
     #region Singleton Pattern
     private static GameManager _instance;
@@ -50,6 +53,8 @@ public class GameManager : MonoBehaviour
             {
                 _lives = maxLives;
             }
+
+            OnLifeValueChanged?.Invoke(_lives);
 
             Debug.Log("Life value changed to: " + _lives);
         }
