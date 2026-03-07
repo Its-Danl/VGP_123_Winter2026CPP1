@@ -5,42 +5,42 @@ using static UnityEngine.GraphicsBuffer;
 public class TurretEnemy : BaseEnemy
 {
     [SerializeField] private float fireRate = 2f;
-    [SerializeField] private Transform target;
     private float timeSinceLastFire = 0f;
-    public float range = 1f;
+    public float range = 5f;
+
+    private PlayerController playerRef;
 
     public override void Start()
     {
         base.Start();
-        GameManager.Instance.OnPlayerSpawned += OnPlayerSpawnedCallback;
 
         if (fireRate <= 0f )
         {
             fireRate = 2f;
             Debug.LogWarning("Fire rate must be greater than 0, defaulting.");
         }
-    }
-    private void OnPlayerSpawnedCallback(PlayerController player)
-    {
-        target = player.transform;
+
+        //Shoot.OnProjectileFired += () => timeSinceLastFire = Time.deltaTime;
+        GameManager.Instance.OnPlayerSpawned += (PlayerController player) => playerRef = player;
+
     }
 
     private void Update()
     {
+        if (playerRef == null) return;
+ 
+        if (!CheckDistance())
+        {
+            sr.color = Color.white;
+            return;
+        }
+
+        sr.flipX = playerRef.transform.position.x < transform.position.x;
+        sr.color = Color.red;
+
         AnimatorStateInfo stateInfo = anim.GetCurrentAnimatorStateInfo(0);
 
-        float distanceToPlayer = Vector2.Distance(transform.position, target.position);
-
-        if (target.position.x < transform.position.x)
-        {
-            sr.flipX = true;
-        }
-        else
-        {
-            sr.flipX = false;
-        }
-
-        if (stateInfo.IsName("Idle") && distanceToPlayer <= range)
+        if (stateInfo.IsName("Idle"))
         {
             if (Time.time >= timeSinceLastFire + fireRate)
             {
@@ -48,5 +48,11 @@ public class TurretEnemy : BaseEnemy
                 timeSinceLastFire = Time.time;
             }
         }
+    }
+
+    bool CheckDistance()
+    {
+        float distanceToPlayer = Mathf.Abs(transform.position.x - playerRef.transform.position.x);
+        return distanceToPlayer <= range;
     }
 }
