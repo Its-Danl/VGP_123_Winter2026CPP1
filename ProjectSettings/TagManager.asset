@@ -20,7 +20,7 @@ TagManager:
   - PickUps
   - Enemy
   - EnemyProjectile
-  - 
+  - PickupBase
   - 
   - 
   - 

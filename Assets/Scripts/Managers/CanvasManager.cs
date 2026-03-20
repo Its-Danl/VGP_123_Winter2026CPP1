@@ -7,7 +7,7 @@ public class CanvasManager : MonoBehaviour
 {
     [Header("Button References")]
     [SerializeField] private Button startButton;
-    [SerializeField] private Button settingsButton;
+    [SerializeField] private Button creditsButton;
     [SerializeField] private Button quitButton;
     [SerializeField] private Button backButton;
     [SerializeField] private Button returnToMenuButton;
@@ -18,7 +18,7 @@ public class CanvasManager : MonoBehaviour
 
     [Header("Menu References")]
     [SerializeField] private GameObject mainMenu;
-    [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject deathMenu;
 
@@ -26,12 +26,12 @@ public class CanvasManager : MonoBehaviour
     {
         if (startButton != null)
             startButton.onClick.AddListener(() => ChangeScene("Game"));
-        if (settingsButton != null)
-            settingsButton.onClick.AddListener(() => SetMenus(settingsMenu, mainMenu));
+        if (creditsButton != null)
+            creditsButton.onClick.AddListener(() => SetMenus(creditsMenu, mainMenu));
         if (quitButton != null)
             quitButton.onClick.AddListener(QuitGame);
         if (backButton != null)
-            backButton.onClick.AddListener(() => SetMenus(mainMenu, settingsMenu));
+            backButton.onClick.AddListener(() => SetMenus(mainMenu, creditsMenu));
         if (returnToMenuButton != null)
             returnToMenuButton.onClick.AddListener(() => ChangeScene("Title"));
         if (resumeGame != null)

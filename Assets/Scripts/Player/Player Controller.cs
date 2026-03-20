@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(SpriteRenderer))]
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Animator), typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Ground Check Settings")]
@@ -20,70 +20,20 @@ public class PlayerController : MonoBehaviour
     public float initialPowerupDuration = 5f;
     public float powerupJumpForce = 20f;
 
+    [Header("Audio Settings")]
+    public AudioClip jumpSound;
+    public AudioClip stompSound;
+
     private float currentPowerupDuration = 0f;
     private Coroutine jumpforceCoroutine = null;
-
-    public void JumpForceChange()
-    {
-        if (jumpforceCoroutine != null)
-        {
-            StopCoroutine(jumpforceCoroutine);
-            jumpforceCoroutine = null;
-            jumpForce = 10f;
-        }
-
-        jumpforceCoroutine = StartCoroutine(JumpForceChangeCoroutine());
-    }
-
-    IEnumerator JumpForceChangeCoroutine() // powerup timer
-    {
-        currentPowerupDuration = initialPowerupDuration + currentPowerupDuration;
-        jumpForce = powerupJumpForce;
-        while (currentPowerupDuration > 0f)
-        {
-            currentPowerupDuration -= Time.deltaTime;
-            yield return null;
-        }
-
-        jumpForce = initialJumpForce;
-        jumpforceCoroutine = null;
-        currentPowerupDuration = 0;
-    }
-
-
-    //private int _lives = 3; // internal value
-    //private int maxLives = 5;
-
-    //public int lives //C# property accessors
-    //{
-    //    get => _lives;
-    //    set
-    //    {
-    //        if (value < 0)
-    //        {
-    //            // die
-    //            Debug.Log("Game Over");
-    //            return;
-    //        }
-
-    //        if (value > maxLives)
-    //        {
-    //            _lives = maxLives;
-    //        }
-    //        else
-    //        {
-    //            _lives = value;
-    //        }
-
-    //        Debug.Log("Life pickup collected:" + _lives);
-    //    }
-    //}
 
     private Rigidbody2D _rb;
     private Collider2D _collider;
     public SpriteRenderer _sr;
     private Animator _anim;
     private GroundCheck _groundCheck;
+    private AudioSource _audioSource;
+
 
     private bool _isGrounded = false;
     private bool _isFiring = false;
@@ -95,6 +45,7 @@ public class PlayerController : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _sr = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
 
         _groundCheck = new GroundCheck(_collider, _rb, groundCheckRadius, groundLayer);
 
@@ -126,6 +77,7 @@ public class PlayerController : MonoBehaviour
         if (jumpInput && _isGrounded)
         {
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            _audioSource.PlayOneShot(jumpSound);
         }
 
         // attacking or shooting
@@ -163,6 +115,35 @@ public class PlayerController : MonoBehaviour
             collision.GetComponentInParent <BaseEnemy>().TakeDamage(0, DamageType.JumpedOn);
             _rb.linearVelocityY = 0;
             _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+            _audioSource.PlayOneShot(stompSound);
         }
+    }
+
+    public void JumpForceChange()
+    {
+        if (jumpforceCoroutine != null)
+        {
+            StopCoroutine(jumpforceCoroutine);
+            jumpforceCoroutine = null;
+            jumpForce = 10f;
+        }
+
+        jumpforceCoroutine = StartCoroutine(JumpForceChangeCoroutine());
+    }
+
+    IEnumerator JumpForceChangeCoroutine() // powerup timer
+    {
+        currentPowerupDuration = initialPowerupDuration + currentPowerupDuration;
+        jumpForce = powerupJumpForce;
+        while (currentPowerupDuration > 0f)
+        {
+            currentPowerupDuration -= Time.deltaTime;
+            yield return null;
+        }
+
+        jumpForce = initialJumpForce;
+        jumpforceCoroutine = null;
+        currentPowerupDuration = 0;
     }
 }
